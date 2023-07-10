@@ -5,6 +5,7 @@ const Post = ({ post }) => {
     <article data-cy="post" key={post._id}>
       {post.message}
       <br />
+      {console.log(post)}
       Posted by: {post.user.email}
       <br />
       <a href={`/posts/${post._id}`}>View post</a>

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Post from "../post/Post";
 import CreatePost from "../createPost/CreatePost";
 import '../../index.css'
+import Navbar from '../navbar/navbar.js';
+import '../navbar/navbar.css';
+
 
 const Feed = ({ navigate }) => {
   const [posts, setPosts] = useState([]);
@@ -39,6 +42,8 @@ const Feed = ({ navigate }) => {
 
   if (token) {
     return (
+      <div>
+        <Navbar />
       <>
 
         <h2>Posts</h2>
@@ -55,6 +60,7 @@ const Feed = ({ navigate }) => {
         </div>
         <div></div>
       </>
+      </div>
     );
   } else {
     navigate("/login");
