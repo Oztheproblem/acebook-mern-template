@@ -11,8 +11,8 @@ import './navbar.css';
 
 const App = () => {
   return (
-  <div>
-    <Navbar />
+    <div>
+      <Navbar />
     <Routes>
       <Route
         path="/posts/:id"
@@ -23,6 +23,8 @@ const App = () => {
       <Route path="/signup" element={<SignUpForm navigate={useNavigate()} />} />
     </Routes>
     </div>
+
+
   );
 };
 
